@@ -1,0 +1,56 @@
+body, p, div{
+    padding:0;
+    margin: 0 auto;
+}
+
+.film-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 85%;
+    margin-top: .1rem;
+    border: dimgray 1px solid;
+    border-radius: .5rem;
+}
+
+.film-info{
+    padding: 1rem;
+}
+
+.star-rating {
+    flex: 0 0 8rem;
+    font-size: 0;
+    padding: 1rem;
+}
+
+.star-rating__wrap {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.star-rating__wrap:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.star-rating__ico {
+    float: right;
+    padding-left: 2px;
+    cursor: pointer;
+    color: gold;
+}
+
+.star-rating__ico:last-child {
+    padding-left: 0;
+}
+
+.star-rating__input {
+    display: none;
+}
+
+.star-rating__ico:hover:before,
+.star-rating__ico:hover ~ .star-rating__ico:before,
+.star-rating__input:checked ~ .star-rating__ico:before {
+    content: "\f005";
+}
