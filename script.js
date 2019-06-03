@@ -1,14 +1,14 @@
-let filmInfo = ['The Godfather (1972)','The Shawshank Redemption (1994)', 'The Dark Knight (2008)',
-    '12 Angry Men (1957)',  'Schindler\'s List (1993)','The Lord of the Rings: The Return of the King (2003)', ];
+let filmInfo = ['The Godfather (1972)', 'The Shawshank Redemption (1994)', 'The Dark Knight (2008)',
+    '12 Angry Men (1957)', 'Schindler\'s List (1993)', 'The Lord of the Rings: The Return of the King (2003)',];
 
 let filmNum = '1';
 
 let templateFilm = ``
 
 for (let i = 0; i < filmInfo.length; i++) {
-    templateFilm = templateFilm +`
+    templateFilm = templateFilm + `
 
-<div class="film-wrap">
+<form class="film-wrap">
     <p class="film-info"> ${filmInfo[i]}</p>
     <div class="star-rating">
         <div class="star-rating__wrap">
@@ -24,9 +24,20 @@ for (let i = 0; i < filmInfo.length; i++) {
             <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-1-${[i]}" title="1 out of 5 stars"></label>
         </div>
     </div>
-</div>
+</form>
 
 `;
 }
 
 document.body.innerHTML = document.body.innerHTML + templateFilm;
+
+let filmListFile = document.querySelectorAll('form');
+
+for (let i = 0; i < filmListFile.length; i++) {
+    console.log(filmListFile[i].querySelectorAll('input').forEach(
+        n => {
+            if (n.checked === true) {
+                return value;
+            }
+        }));
+}
